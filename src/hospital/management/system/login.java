@@ -34,8 +34,15 @@ public class login extends JFrame {
         jPasswordField.setBackground(new Color(255,255,255));
         add(jPasswordField);
 
-        
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        ImageIcon imageIcon = new ImageIcon(ClassLoader.getSystemResource("icons/login.png"));
+        Image i1 = imageIcon.getImage().getScaledInstance(200,200,Image.SCALE_DEFAULT);
+        ImageIcon imageIcon1 = new ImageIcon(i1);
+        JLabel lable = new JLabel(imageIcon1);
+        lable.setBounds(300,-30,400,300);
+        add(lable);
+
+
         getContentPane().setBackground(new Color(109,164,170));
         setSize(750,300);
         setLocation(400,270);
