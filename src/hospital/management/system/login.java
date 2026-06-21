@@ -34,14 +34,13 @@ public class login extends JFrame {
         jPasswordField.setBackground(new Color(255,255,255));
         add(jPasswordField);
 
-
+        
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         getContentPane().setBackground(new Color(109,164,170));
         setSize(750,300);
         setLocation(400,270);
         setLayout(null);
         setVisible(true);
-
-
     }
 
     public static void main(String[] args){
