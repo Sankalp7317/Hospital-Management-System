@@ -7,6 +7,7 @@ public class login extends JFrame {
 
     JTextField textField;
     JPasswordField jPasswordField;
+    JButton b1,b2;
 
     login(){
 
@@ -34,14 +35,26 @@ public class login extends JFrame {
         jPasswordField.setBackground(new Color(255,255,255));
         add(jPasswordField);
 
-
         ImageIcon imageIcon = new ImageIcon(ClassLoader.getSystemResource("icons/login.png"));
-        Image i1 = imageIcon.getImage().getScaledInstance(200,200,Image.SCALE_DEFAULT);
+        Image i1 = imageIcon.getImage().getScaledInstance(500,500,Image.SCALE_DEFAULT);
         ImageIcon imageIcon1 = new ImageIcon(i1);
         JLabel lable = new JLabel(imageIcon1);
-        lable.setBounds(300,-30,400,300);
+        lable.setBounds(320,-30,400,300);
         add(lable);
 
+        b1 = new JButton("Login");
+        b1.setBounds(40,140,120,30);
+        b1.setFont(new Font("serif",Font.BOLD,16));
+        b1.setBackground(Color.BLACK);
+        b1.setForeground(Color.WHITE);
+        add(b1);
+
+        b2 = new JButton("Cancel");
+        b2.setBounds(180,140,120,30);
+        b2.setFont(new Font("serif",Font.BOLD,16));
+        b2.setBackground(Color.BLACK);
+        b2.setForeground(Color.WHITE);
+        add(b2);
 
         getContentPane().setBackground(new Color(109,164,170));
         setSize(750,300);
