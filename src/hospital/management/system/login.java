@@ -1,9 +1,14 @@
 package hospital.management.system;
 
+import com.mysql.cj.protocol.Resultset;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 
-public class login extends JFrame {
+public class login extends JFrame implements ActionListener {
 
     JTextField textField;
     JPasswordField jPasswordField;
@@ -47,6 +52,7 @@ public class login extends JFrame {
         b1.setFont(new Font("serif",Font.BOLD,16));
         b1.setBackground(Color.BLACK);
         b1.setForeground(Color.WHITE);
+        b1.addActionListener(this);
         add(b1);
 
         b2 = new JButton("Cancel");
@@ -54,6 +60,7 @@ public class login extends JFrame {
         b2.setFont(new Font("serif",Font.BOLD,16));
         b2.setBackground(Color.BLACK);
         b2.setForeground(Color.WHITE);
+        b2.addActionListener(this);
         add(b2);
 
         getContentPane().setBackground(new Color(109,164,170));
@@ -63,7 +70,35 @@ public class login extends JFrame {
         setVisible(true);
     }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == b1){
+            try{
+                connection c = new connection();
+                String user = textField.getText();
+                String pass = jPasswordField.getText();
+
+                String q = "select * from login where ID = '"+user+"' and PW = '"+pass+"'";
+                ResultSet resultset = c.statement.executeQuery(q);
+
+                if (resultset.next()){
+                    new reception();
+                    setVisible(false);
+                }else {
+                    JOptionPane.showMessageDialog(null,"Invalid");
+                }
+
+            }catch (Exception E){
+                E.printStackTrace();
+            }
+        }else{
+            System.exit(10);
+        }
+    }
+
     public static void main(String[] args){
         new login();
     }
+
+
 }
