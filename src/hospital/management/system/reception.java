@@ -42,7 +42,7 @@ public class reception extends JFrame {
         btn1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-
+                new new_patient();
             }
         });
 
