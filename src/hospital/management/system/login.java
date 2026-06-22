@@ -40,8 +40,8 @@ public class login extends JFrame implements ActionListener {
         jPasswordField.setBackground(new Color(255,255,255));
         add(jPasswordField);
 
-        ImageIcon imageIcon = new ImageIcon(ClassLoader.getSystemResource("icons/login.png"));
-        Image i1 = imageIcon.getImage().getScaledInstance(500,500,Image.SCALE_DEFAULT);
+        ImageIcon imageIcon = new ImageIcon(ClassLoader.getSystemResource("icons/login3.png"));
+        Image i1 = imageIcon.getImage().getScaledInstance(400,400,Image.SCALE_DEFAULT);
         ImageIcon imageIcon1 = new ImageIcon(i1);
         JLabel lable = new JLabel(imageIcon1);
         lable.setBounds(320,-30,400,300);
@@ -63,7 +63,7 @@ public class login extends JFrame implements ActionListener {
         b2.addActionListener(this);
         add(b2);
 
-        getContentPane().setBackground(new Color(109,164,170));
+        getContentPane().setBackground(new Color(2,69,96));
         setSize(750,300);
         setLocation(400,270);
         setLayout(null);
