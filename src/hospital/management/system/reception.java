@@ -53,7 +53,7 @@ public class reception extends JFrame {
         btn2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-
+                new room();
             }
         });
 
@@ -64,7 +64,7 @@ public class reception extends JFrame {
         btn3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-
+                new department();
             }
         });
 
@@ -75,7 +75,7 @@ public class reception extends JFrame {
         btn4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-
+            new employee_info();
             }
         });
 
@@ -86,7 +86,7 @@ public class reception extends JFrame {
         btn5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-
+                new all_patient_info();
             }
         });
 
