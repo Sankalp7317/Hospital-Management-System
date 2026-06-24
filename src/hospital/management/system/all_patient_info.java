@@ -104,7 +104,7 @@ public class all_patient_info extends JFrame {
 
     }
 
-    public static void main() {
+    public static void main(String[] args) {
         new all_patient_info();
 
     }

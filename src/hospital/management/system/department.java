@@ -64,7 +64,7 @@ public class department extends JFrame {
         setLocation(350,250);
         setVisible(true);
     }
-    public static void main() {
+    public static void main(String[] args) {
         new department();
 
     }
